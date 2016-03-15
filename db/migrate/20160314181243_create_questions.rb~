@@ -1,0 +1,13 @@
+class CreateQuestions < ActiveRecord::Migration
+  def change
+    create_table :questions do |t|
+      t.string :question
+      t.string :test
+      t.integer :like
+      t.integer :dislike
+      t.integer :rate
+
+      t.timestamps null: false
+    end
+  end
+end
